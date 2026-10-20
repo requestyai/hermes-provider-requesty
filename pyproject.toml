@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hermes-provider-requesty"
+version = "0.1.0"
+description = "Requesty model-provider plugin for Hermes Agent"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Requesty" }]
+keywords = ["hermes-agent", "hermes-plugin", "model-provider", "requesty", "llm", "openai-compatible"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/requestyai/hermes-provider-requesty"
+Issues = "https://github.com/requestyai/hermes-provider-requesty/issues"
+Requesty = "https://requesty.ai"
+
+# Hermes discovers pip-installed providers through this group; the module
+# self-registers on import. Enable it with `plugins.enabled: [requesty]`.
+[project.entry-points."hermes_agent.plugins"]
+requesty = "requesty"
+
+[tool.setuptools]
+packages = ["requesty"]
+
+[tool.setuptools.package-data]
+requesty = ["plugin.yaml", "after-install.md"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"

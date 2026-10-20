@@ -1,0 +1,10 @@
+name: requesty
+kind: model-provider
+version: 0.1.0
+description: Requesty — LLM gateway with managed routing policies (OpenAI-compatible)
+author: Requesty
+requires_hermes: ">=0.21.6"
+requires_env:
+  - name: REQUESTY_API_KEY
+    url: https://app.requesty.ai/api-keys
+    secret: true
